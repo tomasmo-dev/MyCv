@@ -1,0 +1,192 @@
+%-------------------------
+% Životopis v LaTeXu
+% Autor: Jake Gutierrez
+% Založeno na: https://github.com/sb2nov/resume
+% Licence: MIT
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[czech]{babel} % Změna na češtinu
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------MOŽNOSTI PÍSMA----------
+% bezpatkové
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% patkové
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % vymazat všechny hlavičkové a patičkové pole
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Nastavení okrajů
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Formátování sekcí
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Zajištění, aby generovaný PDF byl strojově čitelný/parsovatelný ATS
+\pdfgentounicode=1
+
+%-------------------------
+% Vlastní příkazy
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  ŽIVOTOPIS ZAČÍNÁ ZDE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HLAVIČKA----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Tomáš Moravec} \\ \vspace{1pt}
+    \small +420 736 768 468 $|$ \href{mailto:info@tomas-moravec.dev}{\underline{info@tomas-moravec.dev}} $|$ 
+    \href{https://www.linkedin.com/in/moravectomas}{\underline{linkedin.com/in/moravectomas}} $|$
+    \href{https://github.com/tomasmo-dev}{\underline{github.com/tomasmo-dev}}
+\end{center}
+
+
+%-----------VZDĚLÁNÍ-----------
+\section{Vzdělání}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Střední škola a Vyšší odborná škola aplikované kybernetiky s.r.o.}{Hradec Králové, Česká republika}
+      {Programování \& IT sítě}{září 2021 -- současnost}%červen 2025}
+  \resumeSubHeadingListEnd
+
+
+%-----------ZKUŠENOSTI-----------
+\section{Zkušenosti}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Softwarový programátor}{červen 2023 -- současnost}
+      {}{Vzdáleně}
+      \resumeItemListStart
+        \resumeItem{Vyvinul jsem účetní software pro vytváření faktur pro studenty}
+        \resumeItem{Vyvinul jsem aplikaci na využívání OpenAi API k efektivní opravě testových otázek}
+        \resumeItem{Vytvořil jsem nástroj na export testových otázek z excelových souborů do databáze MySql}
+      \resumeItemListEnd
+      
+% -----------Hlavička pro více pozic-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{říjen 2014 - září 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam je unifikovaný model pro definici paralelních zpracovatelských potrubí pro zpracování dat ve formě bloků a ve formě datově paralelních toků}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJEKTY-----------
+\section{Projekty}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Vlastní webový server v C\#} $|$ \emph{C\#, CSS, JS, HTML}}{ 24. února 2022 -- 21. února 2023 }
+          \resumeItemListStart
+            \resumeItem{Vyvinul jsem program na hostování v C\#, který používá trasování definované v JSON}
+            \resumeItem{Obsahuje vestavěné vlastní systém na zaznamenávání informaci/errorů a podporuje HTML, CSS, JS a obrázky}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Jednoduchá online bankovní aplikace} $|$ \emph{C\#, ASP.NET, MSSQL,	CSHTML, CSS, JS \hspace{0.5em}}}{listopad 2023 -- leden 2024}
+          \resumeItemListStart
+            \resumeItem{Vytvořil jsem aplikaci ASP.NET Core MVC pro simulaci online bankovnictví}
+            \resumeItem{Aplikace používá MSSQL databázi pro trvalé uložení dat}
+            \resumeItem{Aplikace umožňuje registraci uživatelů a převody peněz}
+            \resumeItem{Obsahuje také administrátorskou stránku, která zobrazuje všechny uživatele a jejich transakce s veškerými osobními údaji}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%
+%-----------DOVEDNOSTI-----------
+\section{Technické dovednosti}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Jazyky}{: C\#, C/C++ (Arduino/ESP32), SQL (Postgres, MSSQL, MySql), JavaScript, HTML/CSS/CSHTML, PHP} \\
+     \textbf{Frameworky}{: ASP.NET Core MVC, Bootstrap, Picocss} \\
+     \textbf{Vývojářské nástroje}{: Git, Docker, Docker Compose, Google Cloud Platform, VS Code, Visual Studio, PhpStorm, Rider} \\
+     \textbf{Knihovny}{: EntityFramework, HtmlAgilityPack}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
